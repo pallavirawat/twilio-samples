@@ -1,6 +1,7 @@
 plugins {
     java
     kotlin("jvm") version "1.3.61"
+    kotlin("plugin.serialization") version "1.3.61"
 }
 
 group = "org.example"
@@ -13,6 +14,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.twilio.sdk", "twilio", "7.42.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0") // JVM dependency
     testCompile("junit", "junit", "4.12")
 }
 
