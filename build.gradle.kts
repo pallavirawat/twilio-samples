@@ -8,10 +8,16 @@ group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
+//    mavenLocal()
     mavenCentral()
+    maven {
+//        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/pallavirawat/kotlin-sample-library")
+    }
 }
 
 dependencies {
+    implementation("org.example", "kotlin-my-library", "1.0-SNAPSHOT")
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.twilio.sdk", "twilio", "7.42.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0") // JVM dependency
